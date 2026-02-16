@@ -73,7 +73,7 @@ export function Modal({
 
         <div
           className={cn(
-            'relative overflow-y-auto bg-surface',
+            'relative overflow-y-auto',
             variant === 'center' && 'rounded-[24px] max-sm:rounded-b-none max-sm:rounded-t-[20px] max-sm:max-h-[85vh]',
             variant === 'slide-right' && 'h-full'
           )}

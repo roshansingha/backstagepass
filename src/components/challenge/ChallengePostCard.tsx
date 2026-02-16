@@ -1,4 +1,4 @@
-import { MoreHorizontal, Smile, MessageCircle, Play } from 'lucide-react'
+import { MoreHorizontal, Smile, MessageCircle } from 'lucide-react'
 import { Avatar } from '../ui/Avatar'
 import { cn } from '../../lib/cn'
 import type { CheckinPost } from '../../types'
@@ -10,8 +10,6 @@ interface ChallengePostCardProps {
 }
 
 export function ChallengePostCard({ post, className }: ChallengePostCardProps) {
-  const isVideo = post.media?.type === 'video'
-
   return (
     <div className={cn('rounded-[24px] border border-[#14003527] bg-surface p-4 dark:border-[#F1E6FD30] dark:bg-[#1A191B]', className)}>
       <div className="flex items-center justify-between">

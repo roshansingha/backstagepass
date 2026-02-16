@@ -1,7 +1,5 @@
-import { Bell, Menu, Flame } from 'lucide-react'
+import { Bell, Menu } from 'lucide-react'
 import { Avatar } from '../ui/Avatar'
-import { Badge } from '../ui/Badge'
-import { IconButton } from '../ui/IconButton'
 import { ThemeToggle } from '../ui/ThemeToggle'
 import { cn } from '../../lib/cn'
 
@@ -27,13 +25,13 @@ export function Header({ theme, onThemeToggle, onMenuToggle, variant = 'default'
       )}
     >
       <div className="flex items-center gap-3">
-        <IconButton
-          label="Toggle menu"
+        <button
+          aria-label="Toggle menu"
           className="lg:hidden"
           onClick={onMenuToggle}
         >
           <Menu className="h-5 w-5" />
-        </IconButton>
+        </button>
 
         <div className="flex items-center gap-2">
           <svg

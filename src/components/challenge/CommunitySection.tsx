@@ -1,12 +1,9 @@
-import { AvatarGroup } from '../ui/AvatarGroup'
-
 interface CommunitySectionProps {
   participantCount: number
-  avatars?: { src: string; alt: string }[]
   children: React.ReactNode
 }
 
-export function CommunitySection({ participantCount, avatars, children }: CommunitySectionProps) {
+export function CommunitySection({ participantCount, children }: CommunitySectionProps) {
   return (
     <div
       className="rounded-[24px] border border-[#14003527] bg-surface p-3 dark:border-[#F1E6FD30] dark:bg-[#1A191B]"

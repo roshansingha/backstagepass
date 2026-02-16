@@ -9,7 +9,6 @@ import { CheckinInput } from './components/challenge/CheckinInput'
 import { CommunitySection } from './components/challenge/CommunitySection'
 import { PinnedPost } from './components/challenge/PinnedPost'
 import { ChallengePostCard } from './components/challenge/ChallengePostCard'
-import { ReactionBar } from './components/challenge/ReactionBar'
 import { SubmissionBanner } from './components/challenge/SubmissionBanner'
 import { ChallengeDescriptionPanel } from './components/challenge/ChallengeDescriptionPanel'
 import { CheckinUploadModal } from './components/challenge/CheckinUploadModal'
@@ -21,7 +20,6 @@ import {
   challengeDays,
   challengeDaysAfterUpload,
   participants,
-  defaultReactions,
   pinnedCreatorPost,
   communityPosts,
   userSubmission,
@@ -80,10 +78,7 @@ export default function App() {
                 userName={subscriber.name}
                 onClick={() => subscriberFlow.openCheckinUpload()}
               />
-              <CommunitySection
-                participantCount={85}
-                avatars={participants.slice(0, 3).map((p) => ({ src: p.avatar, alt: p.name }))}
-              >
+              <CommunitySection participantCount={85}>
                 <PinnedPost post={pinnedCreatorPost} />
                 {communityPosts.map((post) => (
                   <ChallengePostCard
@@ -103,10 +98,7 @@ export default function App() {
                 <SubmissionBanner />
                 <ChallengePostCard post={userSubmission} onReaction={handleReaction} />
               </div>
-              <CommunitySection
-                participantCount={85}
-                avatars={participants.slice(0, 3).map((p) => ({ src: p.avatar, alt: p.name }))}
-              >
+              <CommunitySection participantCount={85}>
                 <PinnedPost post={pinnedCreatorPost} />
                 {communityPosts.map((post) => (
                   <ChallengePostCard

@@ -1,4 +1,4 @@
-import { MoreHorizontal, Smile, MessageCircle, Pin } from 'lucide-react'
+import { MoreHorizontal, Smile, MessageCircle } from 'lucide-react'
 import { Avatar } from '../ui/Avatar'
 import { cn } from '../../lib/cn'
 import type { CheckinPost } from '../../types'

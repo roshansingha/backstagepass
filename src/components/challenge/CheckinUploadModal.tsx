@@ -1,7 +1,6 @@
 import { X, Image, Video, Smile } from 'lucide-react'
 import { useState, useRef } from 'react'
 import { Modal } from '../ui/Modal'
-import { Avatar } from '../ui/Avatar'
 
 interface CheckinUploadModalProps {
   isOpen: boolean

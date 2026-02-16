@@ -1,7 +1,4 @@
-import { Play } from 'lucide-react'
 import { Modal } from '../ui/Modal'
-import { Button } from '../ui/Button'
-import { AvatarGroup } from '../ui/AvatarGroup'
 import type { Challenge, Participant } from '../../types'
 
 interface ChallengeDescriptionPanelProps {
@@ -9,42 +6,6 @@ interface ChallengeDescriptionPanelProps {
   onClose: () => void
   challenge: Challenge
   participants?: Participant[]
-}
-
-function ProgressRing({ percentage, color, size = 48 }: { percentage: number; color: string; size?: number }) {
-  const strokeWidth = 3
-  const radius = (size - strokeWidth) / 2
-  const circumference = 2 * Math.PI * radius
-  const strokeDashoffset = circumference - (percentage / 100) * circumference
-
-  return (
-    <div className="relative inline-flex items-center justify-center">
-      <svg width={size} height={size} className="-rotate-90">
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          fill="none"
-          stroke="rgba(255,255,255,0.2)"
-          strokeWidth={strokeWidth}
-        />
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          fill="none"
-          stroke={color}
-          strokeWidth={strokeWidth}
-          strokeLinecap="round"
-          strokeDasharray={circumference}
-          strokeDashoffset={strokeDashoffset}
-        />
-      </svg>
-      <span className="absolute text-[11px] font-semibold text-white">
-        {percentage}%
-      </span>
-    </div>
-  )
 }
 
 function AudioWaveform() {
@@ -66,7 +27,6 @@ export function ChallengeDescriptionPanel({
   isOpen,
   onClose,
   challenge,
-  participants,
 }: ChallengeDescriptionPanelProps) {
   return (
     <Modal isOpen={isOpen} onClose={onClose} variant="slide-right" showClose={false}>

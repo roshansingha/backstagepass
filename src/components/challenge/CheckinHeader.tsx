@@ -5,7 +5,7 @@ interface CheckinHeaderProps {
   endTime?: string
 }
 
-export function CheckinHeader({ dayNumber, endTime }: CheckinHeaderProps) {
+export function CheckinHeader({ endTime }: CheckinHeaderProps) {
   return (
     <div className="flex items-center justify-center gap-2">
       <h2 className="text-lg font-semibold leading-[26px] tracking-[-0.0004em] text-[#211F26] dark:text-white">

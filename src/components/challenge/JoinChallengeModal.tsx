@@ -1,6 +1,5 @@
-import { Play, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import { Modal } from '../ui/Modal'
-import { AvatarGroup } from '../ui/AvatarGroup'
 import type { Challenge, Participant } from '../../types'
 
 interface JoinChallengeModalProps {
@@ -15,7 +14,6 @@ export function JoinChallengeModal({
   isOpen,
   onClose,
   challenge,
-  participants,
   onJoin,
 }: JoinChallengeModalProps) {
   return (

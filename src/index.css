@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-accent: #6c5ce7;
+  --color-accent-hover: #5a4bd1;
+  --color-accent-light: #ede9ff;
+  --color-accent-subtle: rgba(108, 92, 231, 0.08);
+
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  --color-like: #ef4444;
+  --color-like-bg: rgba(239, 68, 68, 0.1);
+
+  --color-confetti-1: #6c5ce7;
+  --color-confetti-2: #fd79a8;
+  --color-confetti-3: #fdcb6e;
+  --color-confetti-4: #00cec9;
+  --color-confetti-5: #e17055;
+  --color-confetti-6: #a29bfe;
+
+  --color-gold: #b8860b;
+  --color-gold-hover: #9a7209;
+  --color-gold-active: #ffac00;
+  --color-dark-purple: #300040;
+  --color-page-bg: #f7f6fc;
+  --color-card-border: #eae7ec;
+  --color-primary-text: #211f26;
+
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-text: var(--sidebar-text);
+  --color-sidebar-text-secondary: var(--sidebar-text-secondary);
+  --color-sidebar-text-muted: var(--sidebar-text-muted);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-indicator: var(--sidebar-indicator);
+  --color-sidebar-hover: var(--sidebar-hover);
+  --color-sidebar-circle: var(--sidebar-circle);
+  --color-sidebar-circle-selected: var(--sidebar-circle-selected);
+
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-brand: "Sarabun", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+  --radius-card: 24px;
+  --radius-panel: 16px;
+  --radius-pill: 9999px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-sidebar: 4px 0 24px rgba(0, 0, 0, 0.12);
+
+  --sidebar-width: 258px;
+  --sidebar-collapsed-width: 72px;
+  --header-height: 60px;
+  --subheader-height: 56px;
+  --sidebar-item-height: 56px;
+  --feed-width: 640px;
+
+  --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-surface-tertiary: var(--surface-tertiary);
+  --color-surface-card: var(--surface-card);
+  --color-surface-hover: var(--surface-hover);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-secondary: var(--on-surface-secondary);
+  --color-on-surface-tertiary: var(--on-surface-tertiary);
+  --color-on-surface-inverse: var(--on-surface-inverse);
+  --color-outline: var(--outline);
+  --color-outline-light: var(--outline-light);
+  --color-shadow-card: var(--shadow-card-color);
+}
+
+:root {
+  --surface: #ffffff;
+  --surface-secondary: #f7f6fc;
+  --surface-tertiary: #f1f3f5;
+  --surface-card: #ffffff;
+  --surface-hover: #f3f4f6;
+
+  --on-surface: #211f26;
+  --on-surface-secondary: #6b7280;
+  --on-surface-tertiary: #9ca3af;
+  --on-surface-inverse: #ffffff;
+
+  --outline: #eae7ec;
+  --outline-light: #f3f4f6;
+
+  --shadow-card-color: rgba(0, 0, 0, 0.06);
+
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #211f26;
+  --sidebar-text-secondary: #6b7280;
+  --sidebar-text-muted: #9ca3af;
+  --sidebar-border: #eae7ec;
+  --sidebar-indicator: #f7f6fc;
+  --sidebar-hover: #f3f4f6;
+  --sidebar-circle: #f1f3f5;
+  --sidebar-circle-selected: #eae7ec;
+}
+
+.dark {
+  --surface: #0f0f1a;
+  --surface-secondary: #0f0f1a;
+  --surface-tertiary: #1e1e36;
+  --surface-card: #1a1a2e;
+  --surface-hover: #252542;
+
+  --on-surface: #e5e7eb;
+  --on-surface-secondary: #9ca3af;
+  --on-surface-tertiary: #6b7280;
+  --on-surface-inverse: #111827;
+
+  --outline: rgba(255, 255, 255, 0.1);
+  --outline-light: rgba(255, 255, 255, 0.06);
+
+  --shadow-card-color: rgba(0, 0, 0, 0.3);
+
+  --sidebar-bg: #1a1a2e;
+  --sidebar-text: #e5e7eb;
+  --sidebar-text-secondary: #9ca3af;
+  --sidebar-text-muted: #6b7280;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-indicator: rgba(255, 255, 255, 0.08);
+  --sidebar-hover: rgba(255, 255, 255, 0.05);
+  --sidebar-circle: rgba(255, 255, 255, 0.1);
+  --sidebar-circle-selected: rgba(255, 255, 255, 0.15);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--surface-secondary);
+    color: var(--on-surface);
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.3) transparent;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  .font-brand {
+    font-family: var(--font-brand);
+  }
+}

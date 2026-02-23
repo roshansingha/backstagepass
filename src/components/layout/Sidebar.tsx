@@ -20,7 +20,7 @@ export function Sidebar({
     <div
       className={cn(
         'flex h-full w-[258px] flex-col overflow-hidden border-r border-sidebar-border',
-        'bg-sidebar-bg text-sidebar-text'
+        'text-sidebar-text'
       )}
     >
       <ChallengeDaySelector

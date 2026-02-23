@@ -29,7 +29,6 @@ import {
 export default function App() {
   const { theme, toggle } = useTheme()
   const subscriberFlow = useChallengeFlow('join_modal')
-
   const activeDays = subscriberFlow.screen === 'post_upload' ? challengeDaysAfterUpload : challengeDays
   const activeDay = activeDays.find((d) => d.day === subscriberFlow.selectedDay)
 
@@ -135,6 +134,7 @@ export default function App() {
         challenge={fitnessChallenge}
         participants={participants}
       />
+
     </div>
   )
 }

@@ -183,7 +183,7 @@ export const flowChallenge: Challenge = {
 }
 
 export const challengeDays: ChallengeDay[] = [
-  { id: 'cd1', day: 1, title: 'Foundation Workout', status: 'active', countdownEndTime: '2026-02-17T23:59:00' },
+  { id: 'cd1', day: 1, title: 'Foundation Workout', status: 'active', countdownEndTime: '2026-02-24T13:51:00' },
   { id: 'cd2', day: 2, title: 'Cardio Blast', status: 'locked' },
   { id: 'cd3', day: 3, title: 'Strength Training', status: 'locked' },
   { id: 'cd4', day: 4, title: 'Active Recovery', status: 'locked' },
@@ -196,7 +196,7 @@ export const challengeDays: ChallengeDay[] = [
 
 export const challengeDaysAfterUpload: ChallengeDay[] = [
   { id: 'cd1', day: 1, title: 'Foundation Workout', status: 'completed' },
-  { id: 'cd2', day: 2, title: 'Cardio Blast', status: 'active', countdownEndTime: '2026-02-16T20:44:00' },
+  { id: 'cd2', day: 2, title: 'Cardio Blast', status: 'active', countdownEndTime: '2026-02-25T20:44:00' },
   { id: 'cd3', day: 3, title: 'Strength Training', status: 'locked' },
   { id: 'cd4', day: 4, title: 'Active Recovery', status: 'locked' },
   { id: 'cd5', day: 5, title: 'HIIT Session', status: 'locked' },

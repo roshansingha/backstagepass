@@ -13,6 +13,7 @@ interface SubHeaderProps {
   challengeStatus?: ChallengeStatus
   onBack?: () => void
   onInfoClick?: () => void
+  onDayClick?: () => void
   onTogglePublish?: () => void
   onEdit?: () => void
   onDelete?: () => void
@@ -28,6 +29,7 @@ export function SubHeader({
   challengeStatus = 'active',
   onBack,
   onInfoClick,
+  onDayClick,
   onTogglePublish,
   onEdit,
   onDelete,
@@ -78,9 +80,12 @@ export function SubHeader({
           </div>
         ) : (
           <>
-            <span className="text-sm font-semibold text-on-surface lg:hidden">
-              {challengeTitle}
-            </span>
+            <button
+              onClick={onDayClick}
+              className="text-sm font-semibold text-on-surface lg:hidden"
+            >
+              Day {dayNumber} of {totalDays}
+            </button>
             <span className="hidden text-sm font-semibold text-on-surface lg:inline">
               Day {dayNumber} of {totalDays}
             </span>
@@ -101,7 +106,7 @@ export function SubHeader({
         </div>
       ) : (
         <div className="flex items-center gap-2">
-          <span className="hidden text-sm text-on-surface-secondary lg:inline">{challengeTitle}</span>
+          <span className="hidden text-base font-semibold leading-6 text-[#211F26] dark:text-white lg:inline">{challengeTitle}</span>
           {onInfoClick && (
             <button onClick={onInfoClick} className="text-on-surface-tertiary hover:text-on-surface-secondary">
               <Info className="h-4 w-4" />
